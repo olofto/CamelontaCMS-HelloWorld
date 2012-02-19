@@ -1,0 +1,43 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="HelloWorld.master.cs" Inherits="HelloWorld.MasterPages.HelloWorld" %>
+<%@ Register Src="../Controls/TopNav.ascx" TagName="TopNav" TagPrefix="Controls" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>HelloWorld Template for Camelonta CMS 5</title>
+    <link href="../theme/css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="alternate" title="RSS feed" href="rss.axd?pubID=<%#CMS.Context.PublicationID%>&amp;PageType=Article" type="application/rss+xml" />
+    <asp:ContentPlaceHolder ID="head" runat="server" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="wrap">
+        
+        <!-- Top header -->
+        <div id="header">
+            <h1><%=GetSiteLogo() %></h1>
+        </div>
+        
+        <!-- Top Navigation -->
+        <Controls:TopNav runat="server" />
+        
+        <!-- Main content -->
+        <div id="content">
+            <asp:ContentPlaceHolder ID="content" runat="server" />
+        </div>
+
+        <!-- Footer -->
+        <div id="footer">
+            <strong>HelloWorld Template</strong> - 
+            <a href="http://www.camelontacms.net">Camelonta CMS 5</a> - 
+            <a href="sitemap.axd?pubID=<%#CMS.Context.PublicationID%>" title="Sitemap">Sitemap</a> - 
+            <a href="rss.axd?pubID=<%#CMS.Context.PublicationID%>&amp;PageType=Article" title="RSS feed"><img src="<%# CMS.Context.Publication.ThemeUrl %>/images/icon_rss.png" alt="RSS feed" /></a>
+        
+            <p><%=CMS.Context.GetSiteProperty("CopyrightText")%></p>
+        </div>
+
+    </div>
+    </form>
+</body>
+</html>
+

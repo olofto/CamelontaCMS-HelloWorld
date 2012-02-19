@@ -1,0 +1,35 @@
+﻿<Template version="4" xmlns="http://www.camelonta.com/CTDL/2007">
+  
+  <Tabs>
+    <Tab ID="main">
+      <Label xml:lang="sv">Mittenkolumn</Label>
+      <Label xml:lang="en">Center column</Label>
+    </Tab>
+    <Tab ID="right">
+      <Label xml:lang="sv">Högerkolumn</Label>
+      <Label xml:lang="en">Right column</Label>
+    </Tab>
+  </Tabs>
+  
+  <PageTypes>
+
+    <PageType Name="FirstPage" Schema="FirstPage.xml" TemplateFile="Default.aspx">
+      <Label xml:lang="sv">Första sidan</Label>
+      <Label xml:lang="en">First Page</Label>
+      <Icon>pink.gif</Icon>
+    </PageType>
+
+    <PageType Name="Article" Schema="Article.xml" TemplateFile="Article.aspx">
+      <Label xml:lang="sv">Artikel</Label>
+      <Label xml:lang="en">Article</Label>
+      <Icon>green.gif</Icon>
+    </PageType>
+
+    <PageType Name="SiteMap" TemplateFile="Sitemap.aspx">
+      <Label>Sitemap</Label>
+      <Icon>SiteMap.gif</Icon>
+    </PageType>
+
+  </PageTypes>
+
+</Template>

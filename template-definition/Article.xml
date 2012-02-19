@@ -1,0 +1,67 @@
+﻿<Schema Version="5.0" xmlns="http://www.camelonta.com/CSL/2008">
+  <Elements>
+
+    <Element Name="bodyText" Type="HtmlEditor" Tab="main">
+      <Label xml:lang="sv">Huvudtext</Label>
+      <Label xml:lang="en">Main Content</Label>
+    </Element>
+
+    <Element Name="panel" Type="Panel" MinOccurs="0" MaxOccurs="3" Tab="right">
+      <Label xml:lang="sv">Textruta</Label>
+      <Label xml:lang="en">Text box</Label>
+      <Element Name="header" Type="TextField">
+        <Label xml:lang="sv">Rubrik</Label>
+        <Label xml:lang="en">Header</Label>
+      </Element>
+      <Element Name="text" Type="HtmlEditorMedium">
+        <Label xml:lang="sv">Textruta</Label>
+        <Label xml:lang="en">Text box</Label>
+      </Element>
+    </Element>
+
+    <Element Name="image" Type="Panel" MinOccurs="0" MaxOccurs="3" Tab="right">
+      <Label xml:lang="sv">Bild</Label>
+      <Label xml:lang="en">Image</Label>
+      <Element Name="imgSrc" Type="ImageChooser">
+        <Label xml:lang="sv">Välj bildfil</Label>
+        <Label xml:lang="en">Choose image</Label>
+      </Element>
+      <Element Name="caption" Type="TextField">
+        <Label xml:lang="sv">Bildtext</Label>
+        <Label xml:lang="en">Caption</Label>
+      </Element>
+    </Element>
+
+    <Element Name="script" Type="TextBox" MinOccurs="0" MaxOccurs="unbounded" Tab="right">
+      <Label>Skript</Label>
+      <Description>Lägger till helt ren oformaterad HTML, inkudera dina egna &#60;script&#62;-taggar</Description>
+    </Element>
+
+    <!-- Image gallery -->
+    <Element Name="ImageGallery" MinOccurs="0" MaxOccurs="unbounded" Type="FolderChooser" Tab="main">
+      <Label xml:lang="sv">Bildgalleri</Label>
+      <Label xml:lang="en">Image gallery</Label>
+      <Description>Välj den mapp som innehåller de bilder du vill visa</Description>
+    </Element>
+
+    <!-- Document list -->
+    <Element Name="DocumentList" Type="Composite" MaxOccurs="unbounded" Tab="main">
+      <Label xml:lang="sv">Dokumentlista</Label>
+      <Label xml:lang="en">Document list</Label>
+
+      <Element Name="Header" Type="TextField">
+        <Label xml:lang="sv">Rubrik</Label>
+        <Label xml:lang="en">Header</Label>
+      </Element>
+
+      <Element Name="ListFolder" Type="FolderChooser">
+        <Label xml:lang="sv">Katalog</Label>
+        <Label xml:lang="en">Folder</Label>
+        <Description xml:lang="sv">Katalogen som ska listas</Description>
+        <Description xml:lang="en">The folder that should be listed</Description>
+      </Element>
+    </Element>
+
+
+  </Elements>
+</Schema>

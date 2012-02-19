@@ -1,0 +1,10 @@
+﻿<Schema Version="5.0" xmlns="http://www.camelonta.com/CSL/2008">
+  <Elements>
+
+    <Element Name="bodyText" Type="HtmlEditor" Tab="main">
+      <Label xml:lang="sv">Huvudtext</Label>
+      <Label xml:lang="en">Main Content</Label>
+    </Element>
+
+  </Elements>
+</Schema>

@@ -1,0 +1,19 @@
+<Schema Version="5.0" xmlns="http://www.camelonta.com/CSL/2008">
+  <Elements>
+
+    <Element Name="SiteLogo" Type="Composite">
+      <Label>Site logo</Label>
+      <Element Name="Part1" Type="TextField">
+        <Label>Part 1 (Black)</Label>
+      </Element>
+      <Element Name="Part2" Type="TextField">
+        <Label>Part 2 (Green)</Label>
+      </Element>
+    </Element>
+    
+    <Element Name="CopyrightText" Type="TextField">
+      <Label>Copyright text</Label>
+    </Element>
+    
+  </Elements>
+</Schema>
